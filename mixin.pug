@@ -1,0 +1,33 @@
+// ALL FUNCTION
+
+mixin MenuItem(title)
+    .menu-left__item
+        .menu-left__item-icon
+            include assets/icons/menu/codesandbox.svg
+        .menu-left__item-title=title
+        .menu-left__item-blur
+
+mixin TagItem(text, type)
+    case type
+        when "my"
+            .tag.tag-my
+                .tag__text=text
+                .tag__icon
+                    include assets/icons/other/cross.svg
+        when "community"
+            .tag.tag-community
+                .tag__text=text
+                .tag__icon
+                    include assets/icons/other/cross.svg
+        default
+            .tag
+                .tag__text=text
+                .tag__icon
+                    include assets/icons/other/cross.svg
+
+mixin FormCreate(title, pch)
+    .form-create
+        .form-create__title=title
+        form
+            input(placeholder=pch).form-create__input
+            button(type="button").form-create__button Create

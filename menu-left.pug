@@ -1,0 +1,42 @@
+// MENU LEFT
+
+.menu__head
+    .menu__head-logo
+        include assets/icons/menu/Logo.svg
+    .menu__head-title Dapplets Project
+        span .
+    .menu__head-arrow
+        include assets/icons/menu/arrow-left.svg
+    .menu__head-butt
+        include assets/icons/other/butter.svg
+nav.menu-left__lists
+    .menu-left__item-active.menu-left__item
+        .menu-left__item-icon
+            include assets/icons/menu/codesandbox.svg
+        .menu-left__item-title All Dapplets
+        .menu-left__item-blur
+    .menu-left__item
+        .menu-left__item-icon
+            include assets/icons/menu/codesandbox.svg
+        .menu-left__item-title Editor’s Choice
+        .menu-left__item-blur
+    +MenuItem("Essential Dapplets")
+    +MenuItem("Social Networks")
+    +MenuItem("Financial Dapplets")
+.menu-left__wrapper
+    .block.block-left
+        .block__title My Lists
+        .block__lists
+            .block__lists-item TOP-10 Twitter Dapplets (<a href="#">Me</a>)
+            .block__lists-item TOP-10 Twitter Dapplets (<a href="#">Me</a>)
+            .block__lists-item TOP-10 Twitter Dapplets (<a href="#">Me</a>)
+.menu-left__wrapper
+    .block.block-left
+        .block__title My Tags
+        .block__tags
+            .block__tags-item
+                +TagItem("Twitter", "my")
+            .block__tags-item
+                +TagItem("Social Me", "my")
+            .block__tags-item
+                +TagItem("Top 10", "my")

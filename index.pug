@@ -1,0 +1,66 @@
+include mixin
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="descriptions" content="Web site created using create-react-app")
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title Application
+        style
+            include styles.css
+    body
+        .wrapper
+            aside.menu.menu-left.menu-hidden
+                include menu-left
+            artcle.content
+                include content
+            aside.menu.menu-right
+                include menu-right
+
+
+        // ------- SCRIPTS ---------
+        script.
+            const arrow_left = document.querySelector('.menu-left .menu__head-arrow')
+            const arrow_right = document.querySelector('.menu-right .menu__head-arrow')
+            const menu_left = document.querySelector('.menu-left')
+            const menu_right = document.querySelector('.menu-right')
+
+            const element = document.createElement('h1')
+
+            element.innerText = window.innerWidth + 'px'
+            element.style.position = "absolute"
+            element.style.top = "-10px"
+            element.style.right = "20px"
+            element.style.padding = "5px 10px"
+            element.style.backgroundColor = "white"
+            element.style.border = "1px solid black"
+
+            // document.querySelector('body').append(element)
+
+            window.addEventListener("resize", ev => {
+                element.innerText = window.innerWidth + 'px'
+
+                if (window.innerWidth > 768 && window.innerWidth < 1200) {
+                    menu_left.classList.add('menu-hidden')
+                    menu_right.classList.add('menu-hidden')
+                }
+            })
+            arrow_left.addEventListener('click', e => {
+                e.stopPropagation()
+                menu_left.classList.toggle('menu-hidden')
+            })
+            arrow_right.addEventListener('click', e => {
+                e.stopPropagation()
+                menu_right.classList.toggle('menu-hidden')
+            })
+
+            menu_left.addEventListener('click', () => {
+                menu_left.classList.remove('menu-hidden')
+            })
+            menu_right.addEventListener('click', () => {
+                menu_right.classList.remove('menu-hidden')
+            })
+
+
+

@@ -1,0 +1,61 @@
+@import url("fontsStyles.css");
+
+/*
+   ff   - font-family
+   b    - background
+   bc   - background-color
+   c    - color
+*/
+
+:root {
+    /* fonts */
+    --ff-primary: "SF Pro Display Regular";
+    --ff-bold: "SF Pro Display Bold";
+    --ff-bolder: "SF Pro Display Black";
+
+    /* font colors */
+    --c-primary: rgba(42, 42, 42, 1);
+    --c-menu: rgba(86, 85, 85, 1);
+    --c-button: rgba(255, 255, 255, 1);
+    --c-gray: rgba(153, 153, 153, 1);
+    --c-gray-light: rgba(187, 187, 187, 1);
+    --c-link: rgba(0, 133, 255, 1);
+    --c-state-en: rgba(98, 189, 107, 1);
+
+    /* background */
+    --b-gradient_1: linear-gradient(to bottom, rgba(185, 251, 255, .4), rgba(255, 255, 255, .2));
+    --bc-my-tags: rgba(82, 65, 191, 1);
+    --bc-community-tags: rgba(65, 191, 176, 1);
+    --bc-button: rgba(0, 133, 255, 1);
+    --bc-disabled-button: rgba(204, 212, 219, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    background-image: url("images/BG.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-y: visible;
+    margin: 0;
+    font-family: var(--ff-primary), sans-serif;
+}
+
+.icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+

@@ -1,0 +1,43 @@
+// MENU RIGHT
+
+.menu__head
+    .menu__head-arrow
+        include assets/icons/menu/arrow-right.svg
+.menu-right__title Dapplet Settings
+.menu-right__wrapper
+    +FormCreate("Create new list", "List name")
+.menu-right__wrapper
+    +FormCreate("New tag", "Tag name")
+.menu-right__wrapper
+    .block.block-right
+        .block__title My Tags
+        .block__tags
+            .block__tags-item
+                +TagItem("Twitter", "my")
+            .block__tags-item
+                +TagItem("Social Me", "my")
+            .block__tags-item
+                +TagItem("Top 10", "my")
+            .block__tags-item
+                +TagItem("Top 10", "my")
+            .block__tags-item
+                +TagItem("Top 10", "my")
+            .block__tags-item
+                +TagItem("Top 10", "my")
+.menu-right__wrapper
+    .block.block-right
+        .block__title Community tags
+        .block__tags
+            .block__tags-item
+                +TagItem("Twitter111111111111111111111", "community")
+            .block__tags-item
+                +TagItem("Social Me", "community")
+            .block__tags-item
+                +TagItem("Top 10", "community")
+.menu-right__wrapper
+    .block.block-right
+        .block__title Working on
+        .block__lists
+            .block__lists-item <span>&#10006;</span> twitter.com
+            .block__lists-item <span>&#10006;</span> twitter.com
+            .block__lists-item <span>&#10006;</span> twitter.com
